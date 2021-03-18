@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --primary-light: rgb(254, 254, 255);
+  --primary-dark: rgb(10, 10, 10);
+}
+
+@mixin font($a, $b, $c) {
+  font-weight: $a;
+  font-size: $b;
+  color: $c;
+}
+
+%flexBasic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%buttonText {
+  button {
+    border: 1px var(--primary-light) solid;
+    padding: 8px 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: var(--primary-light) 0.5;
+    color: var(--primary-light);
+    width: 2.5rem;
+    height: 4rem;
+
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      transition: 0.2s;
+    }
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat";
+  height: 100vh;
+  overflow: hidden;
+  
+}
+
+.slider-container {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  @extend %buttonText;
+
+  & .left-slide {
+    height: 100%;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    transition:top 0.5s;
+    & div {
+      height: 100%;
+      width: 100%;
+      color: var(--primary-light);
+      @extend %flexBasic;
+      flex-direction: column;
+      // transition:all 0.5s;
+    }
+  }
+  & .right-slide {
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition:all 0.5s;
+    & div {
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+     
+      & h1{
+        font-size: 2.2rem;
+        margin:1rem 0;
+      }
+    }
+  }
+}
+.down-button {
+  position: absolute;
+  top: calc(50% - 2rem);
+  left: calc(40% + 1px);
+}
+.up-button {
+  position: absolute;
+  top: calc(50% + 2rem);
+  right: calc(60% - 1px);
+}

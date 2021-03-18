@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+:root {
+  --primary-light: #f3fff1;
+  --primary-center: rgba(0, 0, 0, 0.267);
+  --primary-dark: rgba(0, 0, 0, 0.514);
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form input {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--primary-dark);
+  border-radius: 30px;
+}
+
+form input::-webkit-input-placeholder {
+  font-weight: 300;
+  font-size: 1rem;
+  color: --primary-light;
+}
+
+form input:-ms-input-placeholder {
+  font-weight: 300;
+  font-size: 1rem;
+  color: --primary-light;
+}
+
+form input::-ms-input-placeholder {
+  font-weight: 300;
+  font-size: 1rem;
+  color: --primary-light;
+}
+
+form input::placeholder {
+  font-weight: 300;
+  font-size: 1rem;
+  color: --primary-light;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+body {
+  background-color: var(--primary-light);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+form {
+  width: 100%;
+}
+
+form input {
+  width: 80%;
+  margin: 0 auto;
+}
+
+form input:active, form input:focus {
+  outline: none;
+}
+
+main {
+  width: 600px;
+}
+
+main .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .card img {
+  width: 8rem;
+  height: 8rem;
+  border: 0.8rem solid var(--primary-center);
+  border-radius: 100%;
+  margin: 1.5rem;
+  outline: var(--primary-dark);
+}
+
+main .card ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+main .card ul li {
+  list-style: none;
+  margin: 0 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  color: --primary-dark;
+}
+
+main .card ul li:not(1) {
+  padding: 0.3rem 0.5rem;
+}
+
+main .card ul li strong {
+  margin: 0 0.2rem;
+}
+
+main .card .repos {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: --primary-light;
+  text-decoration: none;
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  padding: 0.3rem 0.5rem;
+  margin: 0.2rem;
+  display: inline-block;
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    width: 100%;
+  }
+  main .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  main .card ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */

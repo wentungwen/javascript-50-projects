@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+:root {
+  --primary-light: rgb(39, 134, 243);
+  --primary-dark: rgb(28, 94, 168);
+}
+
+.hero .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+  margin: 0;
+}
+
+.hero {
+  background-image: url(./1.jpg);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+}
+
+.hero .container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00000050;
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.hero .container > * {
+  width: 60%;
+}
+
+.content.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content h2 {
+  margin-top: 3rem;
+}
+
+.content h3 {
+  margin-top: 2rem;
+}
+
+nav {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 1rem;
+}
+
+nav .container h1 a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #3a2f2f;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+nav ul > * {
+  list-style: none;
+  margin: 0.5rem;
+}
+
+nav ul > li a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #4d4d4d;
+}
+
+nav ul > li a.active {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: red;
+}
+
+nav.active {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: #000000c4;
+  color: #fff;
+}
+
+nav.active h1 a {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+nav.active .container ul li a {
+  color: #fff;
+  font-size: 1rem;
+}
+
+nav.active .container ul li a.active {
+  font-weight: 400;
+  font-size: 1rem;
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */

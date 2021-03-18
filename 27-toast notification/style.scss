@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --primary-light: rgb(252, 243, 255);
+  --primary-dark: rgb(89, 32, 128);
+  --pretty-dark: rgba(13, 45, 82, 0.253);
+  --shadow: 0 0 0.3rem 0.3rem #00000020;
+}
+
+@mixin font($a, $b, $c) {
+  font-weight: $a;
+  font-size: $b;
+  color: $c;
+}
+
+%flexBasic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%buttonText {
+  button {
+    border: none;
+    padding: 10px 12px;
+    letter-spacing: 1px;
+    background-color: var(--primary-light);
+    width: 15rem;
+    margin: 0.5rem 0;
+    text-align: left;
+    @include font(500, 1.2rem, --primary-dark);
+    text-align: center;
+    box-shadow: var(--shadow);
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      transition: 0.2s;
+    }
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-dark);
+  font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  @extend %buttonText;
+}
+
+#toasts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  .toast {
+    display: inline;
+    margin:.5rem 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-light);
+    @include font(400, 0.8rem, --pretty-dark);
+    box-shadow: var(--shadow);
+  }
+}

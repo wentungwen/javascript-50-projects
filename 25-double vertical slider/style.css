@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+:root {
+  --primary-light: rgb(254, 254, 255);
+  --primary-dark: rgb(10, 10, 10);
+}
+
+.slider-container .left-slide div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider-container button {
+  border: 1px var(--primary-light) solid;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: var(--primary-light) 0.5;
+  color: var(--primary-light);
+  width: 2.5rem;
+  height: 4rem;
+}
+
+.slider-container button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.slider-container button:focus, .slider-container button:active {
+  outline: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat";
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider-container {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.slider-container .left-slide {
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: top 0.5s;
+  transition: top 0.5s;
+}
+
+.slider-container .left-slide div {
+  height: 100%;
+  width: 100%;
+  color: var(--primary-light);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.slider-container .right-slide {
+  height: 100%;
+  width: 60%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.slider-container .right-slide div {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+.slider-container .right-slide div h1 {
+  font-size: 2.2rem;
+  margin: 1rem 0;
+}
+
+.down-button {
+  position: absolute;
+  top: calc(50% - 2rem);
+  left: calc(40% + 1px);
+}
+
+.up-button {
+  position: absolute;
+  top: calc(50% + 2rem);
+  right: calc(60% - 1px);
+}
+/*# sourceMappingURL=style.css.map */

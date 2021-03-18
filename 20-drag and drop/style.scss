@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --primary-light: rgb(39, 134, 243);
+  --primary-dark: rgb(28, 94, 168);
+}
+
+@mixin font($a, $b, $c) {
+  font-weight: $a;
+  font-size: $b;
+  color: $c;
+}
+
+%flexBasic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(39, 38, 61);
+  font-family: "Montserrat";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.empty {
+  height: 100px;
+  width: 100px;
+  border: solid 1px #dcdcdc;
+  margin: 0.3rem;
+  background-color: #fff;
+}
+
+   .fill{
+background-image: url(https://picsum.photos/100);
+width: 100px;
+height:100px
+  }
+
+  .hover{
+background:rgb(202, 202, 202);
+border: dashed #fff 5px;
+  }
+
+  .hold{
+    border: solid rgb(189, 118, 255) 3px;
+    transform: scale(0.8);
+  }
+
+.invisible{
+  visibility: hidden;
+}
