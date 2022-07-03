@@ -18,27 +18,4 @@ body {
   overflow: hidden;
   margin: 0;
   background-color: var(--primary-light);
-}
-
-.text-style {
-  display: inline;
-}
-
-input {
-  position: fixed;
-  bottom: 1rem;
-  background-color: rgba(0, 0, 0, 0.123);
-  color: #fff;
-  border: 0;
-  padding: 0.5rem 1rem;
-}
-input:focus {
-  outline: 0;
-}
-
-h1 {
-  font-weight: 700;
-  font-size: 2rem;
-  color: var(--primary-dark);
-  letter-spacing: 1px;
 }/*# sourceMappingURL=style.css.map */

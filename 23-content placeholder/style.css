@@ -5,28 +5,18 @@
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "David Libre", serif;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   height: 100vh;
   overflow: hidden;
   margin: 0;
@@ -35,33 +25,27 @@ body {
 
 .card {
   background-color: #fff;
-  -webkit-box-shadow: 0 0 1rem #00000050;
-          box-shadow: 0 0 1rem #00000050;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3137254902);
   height: 520px;
   width: 400px;
   border-radius: 10px;
   overflow: hidden;
 }
-
 .card .card-header img {
   width: 100%;
 }
-
 .card .card-content {
   padding: 0 1.8rem;
 }
-
 .card .card-content > * {
   margin: 0;
 }
-
 .card .card-content .card-title {
   margin-top: 2rem;
   font-weight: 600;
   font-size: 1.8rem;
   color: #000;
 }
-
 .card .card-content .card-excerpt {
   margin: 1rem 0 2rem 0;
   font-weight: 300;
@@ -70,43 +54,27 @@ body {
 }
 
 .author {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
 }
-
 .author .profile-img img {
   border-radius: 100%;
   width: 60px;
 }
-
 .author .author-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-left: 1rem;
 }
 
 .animated-bg,
 .animated-bg .animated-bg-text {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, var(--primary-dark)), color-stop(30%, var(--primary-light)), color-stop(50%, var(--primary-dark)), to(var(--primary-dark)));
   background-image: linear-gradient(90deg, var(--primary-dark) 20%, var(--primary-light) 30%, var(--primary-dark) 50%, var(--primary-dark) 100%);
   background-size: 200% 100%;
   -webkit-animation: bganimation 1s infinite linear;
           animation: bganimation 1s infinite linear;
 }
-
 .animated-bg.profile-img {
   width: 60px;
   height: 60px;
@@ -144,5 +112,4 @@ strong.animated-bg.animated-bg-text {
   100% {
     background-position: -150% 0;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
