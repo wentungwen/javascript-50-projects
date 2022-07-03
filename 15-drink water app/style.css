@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+:root {
+  --primary-light: rgb(39, 134, 243);
+  --primary-dark: rgb(28, 94, 168);
+}
+
+body, .cup, .remained {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--primary-light);
+  font-family: "Montserrat";
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+}
+
+h3 {
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+
+.cup {
+  margin: 2rem;
+  border: 4px solid var(--primary-dark);
+  height: 330px;
+  width: 150px;
+  border-radius: 0 0 15px 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+}
+
+ul.cups {
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+ul.cups .cup-small {
+  height: 136px;
+  width: calc((100% - 5rem) / 5);
+  margin: 1rem;
+  background-color: var(--primary-light);
+}
+
+ul.cups .cup-small:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+ul.cups .cup-small.full {
+  background-color: #fff;
+  color: var(--primary-dark);
+}
+
+.percentage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 9;
+      -ms-flex: 9;
+          flex: 9;
+  color: var(--primary-dark);
+}
+
+.remained {
+  background: var(--primary-light);
+  width: 100%;
+  height: 100%;
+  color: var(--primary-dark);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.remained h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.remained small {
+  font-weight: 200;
+  font-size: 0.8rem;
+}
+/*# sourceMappingURL=style.css.map */

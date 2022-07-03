@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+:root {
+  --primary-color: rgb(226, 226, 226);
+  --secondary-color: rgba(34, 34, 34);
+  --pointer-index: rgb(173, 173, 173);
+}
+
+html.dark {
+  --primary-color: rgba(34, 34, 34);
+  --secondary-color: rgba(255, 255, 255, 0.925);
+}
+
+.dark {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+html {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: "Montserrat";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+button {
+  border: none;
+  padding: 10px 15px;
+  margin-top: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+button:focus, button:active {
+  outline: none;
+  border: none;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+button:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  cursor: pointer;
+}
+
+.clock {
+  width: 200px;
+  height: 200px;
+  margin: 5rem 0;
+  position: relative;
+}
+
+.needle {
+  width: 3px;
+  background: var(--secondary-color);
+  border-radius: 0 0 50% 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.needle.hour {
+  height: 60px;
+}
+
+.needle.minute {
+  height: 80px;
+}
+
+.needle.second {
+  height: 100px;
+}
+
+.index {
+  width: 200px;
+  background: transparent;
+  height: 1.5px;
+  border-right: var(--pointer-index) 7px solid;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  border-left: var(--pointer-index) 7px solid;
+}
+
+.index:nth-child(1) {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.index:nth-child(2) {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+
+.index:nth-child(3) {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  transform: rotate(90deg);
+  border-right: 15px var(--pointer-index) solid;
+  border-left: 15px var(--pointer-index) solid;
+}
+
+.index:nth-child(4) {
+  -webkit-transform: rotate(120deg);
+          transform: rotate(120deg);
+}
+
+.index:nth-child(5) {
+  -webkit-transform: rotate(150deg);
+          transform: rotate(150deg);
+}
+
+.index:nth-child(6) {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  border-right: 15px var(--pointer-index) solid;
+  border-left: 15px var(--pointer-index) solid;
+}
+
+.time {
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+.date {
+  font-weight: 700;
+}
+/*# sourceMappingURL=style.css.map */

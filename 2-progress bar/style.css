@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --line-border-fill: hsl(219, 58%, 49%);
+  --line-border-empty: #00000030;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat";
+  background-color: rgb(209, 238, 238);
+  /* 垂直與水平致中，外加垂直排列 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* 要給他一個高度 才會看出置中效果*/
+  height: 100vh;
+  /* 讓捲軸不出現 */
+  overflow: hidden;
+
+  margin: 0;
+}
+.container {
+  text-align: center;
+}
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 10px;
+  max-width: 100%;
+  width: 350px;
+}
+
+.progress {
+  background-color: var(--line-border-fill);
+  width: 10%;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+.progress-container::before {
+  content: "";
+  background-color: var(--line-border-empty);
+  width: 99%;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.circle {
+  background-color: rgb(255, 255, 255);
+  color: #999;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line-border-empty);
+  transition: 0.3s ease;
+}
+.active {
+  border-color: var(--line-border-fill);
+}
+
+.btn {
+  background-color: var(--line-border-fill);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+.btn:disabled {
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
+}

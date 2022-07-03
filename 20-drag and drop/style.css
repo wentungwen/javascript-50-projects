@@ -5,15 +5,22 @@
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  background-color: rgb(39, 38, 61);
+  background-color: #27263d;
   font-family: "Montserrat";
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100vh;
   overflow: hidden;
   margin: 0;
@@ -34,15 +41,17 @@ body {
 }
 
 .hover {
-  background: rgb(202, 202, 202);
+  background: #cacaca;
   border: dashed #fff 5px;
 }
 
 .hold {
-  border: solid rgb(189, 118, 255) 3px;
-  transform: scale(0.8);
+  border: solid #bd76ff 3px;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .invisible {
   visibility: hidden;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */

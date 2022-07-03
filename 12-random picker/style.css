@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+:root {
+  --bg-color: rgb(49, 88, 218);
+  --black-transparent: rgba(36, 7, 7, 0.424);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h3 span, #tags .tag {
+  background-color: var(--black-transparent);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: rgba(255, 255, 255, 0.897);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-family: "Roboto";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+}
+
+h3 span {
+  margin-top: 10px;
+}
+
+textarea {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.87);
+  color: var(--bg-color);
+}
+
+#tags {
+  display: inline-block;
+  line-height: 2.5rem;
+  margin: 20px 0;
+}
+
+#tags .tag {
+  background-color: var(--black-transparent);
+  margin: 3rem 0;
+}
+
+#tags .tag.highlight {
+  background-color: #d6d321;
+  color: #000;
+  font-weight: 700;
+}
+/*# sourceMappingURL=style.css.map */

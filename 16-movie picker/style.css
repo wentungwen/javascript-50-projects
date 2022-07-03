@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+:root {
+  --primary-light: rgb(68, 87, 85);
+  --primary-dark: rgb(27, 37, 49);
+}
+
+header form, main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--primary-dark);
+  font-family: "Montserrat";
+  height: 100vh;
+  color: #fff;
+}
+
+header {
+  height: 50px;
+  background: var(--primary-light);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header form {
+  height: 100%;
+}
+
+header form input {
+  padding: 7px 15px;
+  margin-right: 1rem;
+  border: 1px #ffffff4d solid;
+  border-radius: 28px;
+  background: #0000001f;
+  font-weight: 100;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+header form input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+header form input:-ms-input-placeholder {
+  color: #fff;
+}
+
+header form input::-ms-input-placeholder {
+  color: #fff;
+}
+
+header form input::placeholder {
+  color: #fff;
+}
+
+header form input:focus {
+  outline: none;
+  background-color: var(--primary-dark);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+main {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .movie {
+  overflow: hidden;
+  margin: 1rem;
+  width: 300px;
+  position: relative;
+  border-radius: 40px 0 40px 0;
+}
+
+main .movie:hover .overview {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+main .movie img {
+  width: 100%;
+}
+
+main .movie .overview {
+  background: #fff;
+  color: #000;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(10rem);
+          transform: translateY(10rem);
+  opacity: 0;
+  font-weight: 100;
+  font-size: 0.8rem;
+}
+
+main .movie .movie-info {
+  background: var(--primary-light);
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .movie .movie-info span {
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 1rem;
+  height: 30px;
+}
+
+main .movie .movie-info span.orange {
+  background: #ff4000;
+}
+
+main .movie .movie-info span.red {
+  background: #ff0000;
+}
+
+main .movie .movie-info span.green {
+  background: #19c502;
+}
+/*# sourceMappingURL=style.css.map */

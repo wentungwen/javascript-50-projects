@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffc107), to(#e78b01));
+  background: linear-gradient(180deg, #ffc107, #e78b01);
+  color: #fff;
+}
+
+body .counter-container {
+  margin: 0.5rem;
+  border: #fff 1px solid;
+  padding: 1rem;
+  border-radius: 10px;
+  background: #ffbc4d;
+  width: 200px;
+}
+
+body .counter-container .counter {
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin: 10px;
+}
+
+body .counter-container .fab,
+body .counter-container .far {
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin: 0.5rem;
+}
+
+body .counter-container .num {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  font-weight: 100;
+}
+
+body .counter-container .content {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Muli:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli";
+  background-color: #f3f3f3;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px 0px 30px;
+}
+
+.faq-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq-container .faq {
+  background-color: #f3f3f3;
+  padding: 2% 5%;
+  margin: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-box-shadow: 1px 1px 10px #00000031;
+          box-shadow: 1px 1px 10px #00000031;
+}
+
+.faq-container .faq-title {
+  margin-right: 30px;
+}
+
+.faq-container .faq-text {
+  display: none;
+  margin-top: 30px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.faq-container .faq.active .faq-text {
+  display: block;
+}
+
+.faq-container .faq.active {
+  background-color: #ffffff;
+}
+
+.faq-container .faq.active::before, .faq-container .faq.active::after {
+  content: "\f075";
+  font-family: "Font Awesome 5 Free";
+  color: #9cff59;
+  font-size: 7rem;
+  position: absolute;
+  opacity: 0.3;
+  top: -20px;
+  left: -10px;
+  z-index: 0;
+}
+
+.faq-container .faq.active::before {
+  color: #8db687;
+  top: 0px;
+  left: 50px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.faq-container .faq-toggle {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.faq-container .faq-toggle .fa-times {
+  display: none;
+}
+
+.faq-container .faq-toggle .fa-chevron-down {
+  display: block;
+}
+
+button:focus,
+button:active {
+  outline: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+  display: block;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

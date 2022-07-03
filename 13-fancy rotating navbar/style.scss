@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+
+%line {
+  background: #000;
+  width: 30px;
+  height: 2px;
+}
+
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(
+    to bottom,
+    #fdc7c7 0%,
+    #fdc7c7 50%,
+    rgb(255, 252, 233) 50%
+  );
+  font-family: "Montserrat";
+  flex-direction: column;
+  @include flex(center, center);
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+nav {
+  width: 80px;
+  background-color: #fff;
+  @include flex(center, center);
+  box-shadow: 1px 1px 10px #00000021;
+  transition: width 0.6s linear;
+
+  &.active {
+    width: 350px;
+    transform: rotateY(360deg);
+
+    & ul {
+      width: 100%;
+    }
+  }
+  ul {
+    width: 100%;
+    font-size: 15px;
+    list-style: none;
+    display: flex;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    transition: width 0.6s linear;
+  }
+
+  li {
+    transform: rotateY(0deg);
+    // opacity: 0;
+    transition: 0.6s linear;
+  }
+}
+button {
+  border: none;
+  background: #fff;
+  height: 100%;
+
+  & .line1 {
+    @extend %line;
+    transform: rotate(45deg);
+  }
+  & .line2 {
+    @extend %line;
+    transform: rotate(-45deg);
+  }
+}
+
+nav .active ul li {
+  opacity: 1;
+}

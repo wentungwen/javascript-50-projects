@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --primary-color: rgb(226, 226, 226);
+  --secondary-color: rgba(34, 34, 34);
+  --pointer-index: rgb(173, 173, 173);
+}
+
+html.dark {
+  --primary-color: rgba(34, 34, 34);
+  --secondary-color: rgba(255, 255, 255, 0.925);
+}
+.dark {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+html {
+  transition: all 1s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--primary-color);
+  font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+button {
+  border: none;
+  padding: 10px 15px;
+  margin-top: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+
+  &:focus,
+  &:active {
+    outline: none;
+    border: none;
+    transform: scale(0.95);
+  }
+
+  &:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+  }
+}
+
+.clock {
+  width: 200px;
+  height: 200px;
+  // background: #c1c1c1;
+  margin: 5rem 0;
+  position: relative;
+}
+.needle {
+  width: 3px;
+  background: var(--secondary-color);
+  border-radius: 0 0 50% 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: top center;
+  transform: translateX(-50%);
+
+  &.hour {
+    // transform: rotate(45deg);
+    height: 60px;
+  }
+  &.minute {
+    // transform: rotate(50deg);
+    height: 80px;
+  }
+  &.second {
+    // transform: rotate(60deg);
+    height: 100px;
+  }
+}
+
+.index {
+  width: 200px;
+  background: transparent;
+  height: 1.5px;
+  border-right: var(--pointer-index) 7px solid;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  border-left: var(--pointer-index) 7px solid;
+
+  &:nth-child(1) {
+    transform: rotate(30deg);
+  }
+  &:nth-child(2) {
+    transform: rotate(60deg);
+  }
+  &:nth-child(3) {
+    transform: rotate(90deg);
+    transform: rotate(90deg);
+    border-right: 15px var(--pointer-index) solid;
+    border-left: 15px var(--pointer-index) solid;
+  }
+  &:nth-child(4) {
+    transform: rotate(120deg);
+  }
+  &:nth-child(5) {
+    transform: rotate(150deg);
+  }
+  &:nth-child(6) {
+    transform: rotate(180deg);
+    border-right: 15px var(--pointer-index) solid;
+    border-left: 15px var(--pointer-index) solid;
+  }
+}
+
+.time {
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+.date {
+  font-weight: 700;
+}

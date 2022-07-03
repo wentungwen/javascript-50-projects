@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&family=Roboto:wght@400;500;600;700&display=swap");
+:root {
+  --bg-color: rgb(36, 70, 134);
+  --color-white: #fff;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--color-white);
+  font-family: "Montserrat";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem 2rem;
+  letter-spacing: 1px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.container .form-control {
+  position: relative;
+  margin: 2rem 0;
+  width: 300px;
+}
+
+.container .form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--color-white);
+  display: block;
+  width: 100%;
+  margin: 4rem 0;
+  color: var(--color-white);
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+
+.container .form-control input:focus + label span,
+.container .form-control input:valid + label span {
+  color: lightblue;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+.container .form-control input:focus, .container .form-control input:valid {
+  outline: 0;
+  border-bottom: lightblue 1px solid;
+}
+
+.container .form-control label {
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
+
+.container .form-control label span {
+  display: inline-block;
+  font-size: 1.2rem;
+  min-width: 5px;
+  -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.container .text {
+  position: relative;
+}
+
+.container a {
+  text-decoration: none;
+  color: lightblue;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
+.container a:hover {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  font-weight: 500;
+}
+
+.container button {
+  display: block;
+  width: 100%;
+  border: 0;
+  color: var(--bg-color);
+  padding: 10px 20px;
+  background-color: var(--color-white);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.container button:focus {
+  outline: none;
+}
+
+.container button:hover {
+  background: var(--bg-color);
+  color: var(--color-white);
+}
+/*# sourceMappingURL=style.css.map */

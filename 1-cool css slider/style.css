@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat";
+  /* 垂直與水平致中，外加垂直排列 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 要給他一個高度 才會看出置中效果*/
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+.container {
+  display: flex;
+  width: 90vw;
+}
+.panel {
+  background-size: cover;
+  background: no-repeat center;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  height: 80vh;
+  /* flex屬性預設0.5，讓東西均分 */
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  position: absolute;
+  font-size: 24px;
+  bottom: 10px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.4s ease-in 0.4s;
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 100vw;
+  }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}

@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat";
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* 要給他一個高度 才會看出置中效果*/
+  height: 100vh;
+  /* 讓捲軸不出現 */
+  overflow: hidden;
+  margin: 0;
+}
+.bg {
+  background: url(./2-1.jpg) no-repeat center center / cover;
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  /* fix白邊 */
+  width: calc(100vw + 60px);
+  height: calc(100vh + 60px);
+  z-index: -1;
+  filter: blur(0px);
+}
+
+.loading-text {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+}

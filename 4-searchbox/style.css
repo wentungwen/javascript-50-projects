@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(
+    90deg,
+    rgb(255, 198, 198),
+    rgb(255, 227, 196)
+  );
+  font-family: "Montserrat";
+  /* 垂直與水平致中，外加垂直排列 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* 要給他一個高度 才會看出置中效果*/
+  height: 100vh;
+  /* 讓捲軸不出現 */
+  overflow: hidden;
+
+  margin: 0;
+}
+
+.search {
+  position: relative;
+  height: 50%;
+}
+.search .input,
+.btn {
+  background-color: #fff;
+  border: 0;
+  font-size: 16px;
+  height: 50px;
+  width: 50px;
+  padding: 15px;
+  transition: width 0.5s ease;
+}
+.btn {
+  background-color: rgb(134, 120, 120);
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease;
+}
+.btn i {
+  color: rgb(255, 255, 255);
+}
+.btn:focus,
+.input:focus {
+  outline: none;
+}
+
+.search.active .input {
+  width: 200px;
+}
+
+.search.active .btn {
+  transform: translateX(200px);
+}

@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Muli:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Muli";
+  background-color: #f3f3f3;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px 0px 30px;
+}
+.faq-container {
+  max-width: 600px;
+  margin: 0 auto;
+
+  & .faq {
+    background-color: #f3f3f3;
+    padding: 2% 5%;
+    margin: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s;
+    box-shadow: 1px 1px 10px #00000031;
+
+    &-title {
+      margin-right: 30px;
+    }
+    &-text {
+      display: none;
+      margin-top: 30px;
+      transition: all 0.5s;
+    }
+    &.active .faq-text {
+      display: block;
+    }
+  }
+  & .faq.active {
+    background-color: #ffffff;
+
+    &::before,
+    &::after {
+      content: "\f075";
+      font-family: "Font Awesome 5 Free";
+      color: #9cff59;
+      font-size: 7rem;
+      position: absolute;
+      opacity: 0.3;
+      top: -20px;
+      left: -10px;
+      z-index: 0;
+    }
+    &::before {
+      color: rgb(141, 182, 135);
+      top: 0px;
+      left: 50px;
+      transform: rotateY(180deg);
+    }
+  }
+  & .faq-toggle {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+
+    & .fa-times {
+      display: none;
+    }
+    & .fa-chevron-down {
+      display: block;
+    }
+  }
+}
+
+button:focus,
+button:active {
+  outline: none;
+}
+
+// 切換icon的打勾和叉叉
+.faq.active .faq-toggle {
+  & .fa-times {
+    display: block;
+  }
+  & .fa-chevron-down {
+    display: none;
+  }
+}
