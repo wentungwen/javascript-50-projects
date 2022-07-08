@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
 :root {
-  --primary-light: rgb(241, 186, 157);
-  --primary-dark: rgb(83, 83, 83);
+  --primary-light: rgb(31, 79, 119);
+  --primary-dark: rgb(4, 39, 113);
 }
 
 * {
@@ -17,5 +17,56 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  color: white;
+  background-color: var(--primary-dark);
+}
+
+h2 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.container {
+  background-color: rgb(22, 37, 90);
+  box-shadow: 0px 2px 6px rgb(197, 197, 197);
+  padding: 20px;
+  width: 350px;
+  max-width: 100%;
+}
+
+.result-container {
+  background-color: rgb(9, 21, 47);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 12px 10px;
+  height: 50px;
+  width: 100%;
+}
+.result-container #result {
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+}
+
+.btn {
   background-color: var(--primary-light);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+.btn-large {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.setting {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 15px 0;
 }/*# sourceMappingURL=style.css.map */
