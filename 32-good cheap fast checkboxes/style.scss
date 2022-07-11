@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
 
 :root {
-  --primary-light: rgb(241, 186, 157);
+  --primary-light: rgb(221, 245, 193);
   --primary-dark: rgb(83, 83, 83);
 }
 
@@ -56,3 +56,70 @@ body {
   background-color: var(--primary-light);
 }
 
+.toggle-container{
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  width: 200px;
+
+  & .toggle{
+    visibility: hidden;
+
+    &:checked + .label{
+      background-color: rgb(0, 91, 0);
+
+      & .ball{
+        animation: slideOn .3s linear forwards;
+      }
+    }
+
+
+  }
+
+  & .label{
+    background-color: rgb(219, 219, 219);
+    width: 80px;
+    height: 40px;
+    border-radius: 100px;
+    margin: 0px 10px;
+    position: relative;
+    
+
+    & .ball{
+      width: 34px;
+      height: 34px;
+      background-color: #fff;
+      position: absolute;
+      border-radius: 100px;
+      top: 3px;
+      left: 3px;
+      animation: slideOff .3s linear forwards;
+    }
+
+  }
+}
+
+
+@keyframes slideOn {
+  0%{
+    transform: translateX(0) scale(1);
+  }
+  50%{
+    transform: translateX(20px) scale(1.2);
+  }
+  100%{
+    transform: translateX(40px) scale(1);
+  }
+}
+
+@keyframes slideOff {
+  0%{
+    transform: translateX(40px) scale(1);
+  }
+  50%{
+    transform: translateX(20px) scale(1.2);
+  }
+  100%{
+    transform: translateX(0) scale(1);
+  }
+}
