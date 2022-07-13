@@ -1,43 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
 
 :root {
   --primary-light: rgb(241, 186, 157);
   --primary-dark: rgb(83, 83, 83);
-}
-
-@mixin font($a, $b, $c) {
-  font-weight: $a;
-  font-size: $b;
-  color: $c;
-}
-
-%flexBasic {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-%buttonText {
-  button {
-    border: none;
-    padding: 8px 12px;
-    letter-spacing: 1px;
-    background-color: var(--primary-dark);
-    width: 12rem;
-    margin: 0.5rem 0;
-    text-align: left;
-    @include font(300, 1.1rem, var(--primary-light));
-    text-align: center;
-
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.05);
-      transition: 0.2s;
-    }
-    &:focus,
-    &:active {
-      outline: 0;
-    }
-  }
 }
 
 * {
@@ -45,14 +10,67 @@
 }
 
 body {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
+  flex-wrap: wrap;
   margin: 0;
-  background-color: var(--primary-light);
+  padding-top: 3rem;
+  background-color: rgb(189, 244, 255);
+}
+
+.add{
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: #9ec862;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: .5rem;
+  cursor: pointer;
+}
+
+.note{
+
+  background-color: #fff;
+  box-shadow:0 0 10px 4px rgba(0,0,0,0.1);
+  margin:30px 20px;
+  height: 400px;
+  width: 400px;
+
+  & .tools{
+    background-color: #9ec862;
+    display: flex;
+    justify-content: flex-end;
+    padding:0.5rem;
+
+    & button{
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+  }
+
+  & textarea{
+    outline: none;
+    font-family: inherit;
+    font-size: 1.2rem;
+    border: none;
+    height: 400px;
+    width: 100%;
+    padding: 20px;
+
+  }
+}
+
+.main{
+  padding: 10px 20px;
+}
+
+.hidden{
+display: none;
 }
 
